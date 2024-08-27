@@ -261,6 +261,9 @@ ul li {
     padding: 20px 20px 0 20px;
 }
 
+.profile-img-main__wrapper{
+    border: 1px solid #fff;
+}
 .profile-img-main img {
     max-width: 100%;
 }
@@ -440,9 +443,9 @@ h1 span {
 
 .jessica-main-text {
     color: var(--1, #FFF);
-    font-size: 96px;
+    font-size: 80px;
     font-weight: 700;
-    line-height: 120px;
+    line-height: 130%;
 }
 
 .jessica-main-text span {
@@ -661,18 +664,18 @@ h1 span {
 
 .marquee-img-main {
     border: 1px solid #63636385;
-    padding: 0 52px;
-    border-radius: 40px;
+    padding:10px 20px;
+    border-radius: 10px;
     cursor: pointer;
-    height: 80px;
-    width: 220px;
+    margin: 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.marquee-img-main {
-    margin: 0 10px;
+.marquee-img-main  img {
+    width: 100px;
+    height: 90px;
 }
 
 /*-----------------------[ 7.About Section CSS ]------------------------*/
@@ -957,6 +960,10 @@ h1 span {
     -webkit-transform-style: preserve-3d;
     perspective: 1000px;
     -webkit-perspective: 1000px;
+    border: 1px solid #fff;
+    height: max-content !important;
+    border-radius: 20px;
+
 }
 
 .flip-box-front {
@@ -972,7 +979,7 @@ h1 span {
 .flip-box-back {
     background-size: cover;
     background-position: center;
-    min-height: 180px;
+    min-height: 300px;
     -ms-transition: transform 0.7s cubic-bezier(.4, .2, .2, 1);
     transition: transform 0.7s cubic-bezier(.4, .2, .2, 1);
     -webkit-transition: transform 0.7s cubic-bezier(.4, .2, .2, 1);
@@ -989,29 +996,34 @@ h1 span {
     -webkit-perspective: inherit;
     perspective: inherit;
     z-index: 2;
-    padding: 20px;
+    padding: 10px ;
     transform: translateY(-50%) translateZ(60px) scale(.94);
     -webkit-transform: translateY(-50%) translateZ(60px) scale(.94);
     -ms-transform: translateY(-50%) translateZ(60px) scale(.94);
     top: 50%;
 }
 
-.award-yer {
+/* .award-yer {
     color: var(--14, #909090);
     text-align: right;
     font-size: 20px;
     font-weight: 400;
     line-height: 20px;
-}
+} */
 
 .winner-award {
     max-width: 100%;
-    padding: 0 0 20px;
+    padding: 0 0 10px;
 }
 
 .years-award-img {
     display: flex;
     justify-content: space-between;
+}
+.years-award-img img{
+    width: 100%;
+    height:225px;
+    object-fit:cover;
 }
 
 .inner p {
@@ -1020,19 +1032,20 @@ h1 span {
 
 .award-interior {
     color: var(--1, #FFF);
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
-    line-height: 32px;
+    line-height: 130%;
+    margin-top: 10px;
 }
 
-.award-winner-text {
+/* .award-winner-text {
     color: var(--11, #FF7D61);
     font-size: 18px;
     font-weight: 500;
     line-height: 18px;
     text-transform: uppercase;
     padding-top: 10px;
-}
+} */
 
 .flip-box-back {
     position: absolute;

@@ -30,7 +30,7 @@ const AboutSection = () => {
           <div className="line"></div>
         </div>
         <p className="section-sub-text about-sub-text zoom_in">
-          Hi, my name is <span>Jessica Biogi</span> and I began using WordPress
+          Hi, my name is <span>Xorozov Shahzod</span> and I began using WordPress
           when first began. I've spent most of my waking hours for the last ten
           years designing, programming and operating WordPress sites go beyond
           with exclusive designer. Apart from this I love to travel, mentor
@@ -41,45 +41,45 @@ const AboutSection = () => {
         </p>
         <div className="about-detail-main">
           <p className="about-detail">Name</p>
-          <p className="about-detail-info">Jessica Biogi</p>
+          <p className="about-detail-info">Shahzod</p>
         </div>
         <div className="about-detail-main">
           <p className="about-detail">Nationality</p>
-          <p className="about-detail-info">USA</p>
+          <p className="about-detail-info">Uzbekistan</p>
         </div>
         <div className="about-detail-main">
           <p className="about-detail">Phone</p>
           <p
             className="about-detail-info email"
-            onClick="location.href='tel:(+1)2345678899'"
+            onClick="location.href='tel:+998(93)3369404'"
           >
-            (+1) 234 567 8899
+            +998(93) 336 94 04
           </p>
         </div>
         <div className="about-detail-main">
           <p className="about-detail">Email</p>
           <p
             className="about-detail-info email"
-            onClick="location.href='mailto:hello@biogi.com'"
+            onClick="location.href='mailto:xorozovshohzod@gmail.com'"
           >
-            hello@biogi.com
+           xorozovshohzod@gmail.com
           </p>
         </div>
         <div className="about-detail-main">
           <p className="about-detail">Experience</p>
-          <p className="about-detail-info">6+ years</p>
+          <p className="about-detail-info">2+ years</p>
         </div>
         <div className="about-detail-main">
           <p className="about-detail">Freelance</p>
           <p className="about-detail-info">Available</p>
         </div>
-        <div className="about-detail-main">
+        {/* <div className="about-detail-main">
           <p className="about-detail">Skype</p>
           <p className="about-detail-info">hello.biogi</p>
-        </div>
+        </div> */}
         <div className="about-detail-main">
           <p className="about-detail">Language</p>
-          <p className="about-detail-info">English</p>
+          <p className="about-detail-info"> English</p>
         </div>
       </section>
       {/* <!-- ====================================== Section About End ===================================== --> */}

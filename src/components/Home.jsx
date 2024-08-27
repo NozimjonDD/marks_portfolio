@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import ProfileImg from "../assets/images/profile-img.png";
+import React, { useEffect,  useState } from "react";
+import ProfileImg from "../assets/images/avatar.png";
 import EmailSvg from "../assets/images/svg/email-svg.svg";
 import BehanceSvg from "../assets/images/svg/behance-svg.svg";
 import DribleSvg from "../assets/images/svg/drribale-svg.svg";
@@ -9,71 +9,47 @@ import AboutSvg from "../assets/images/svg/about-svg.svg";
 import ResumeSvg from "../assets/images/svg/resume-svg.svg";
 import ServicesSvg from "../assets/images/svg/services-svg.svg";
 import PortfolioSvg from "../assets/images/svg/portfolio-svg.svg";
-import PricingSvg from "../assets/images/svg/pricing-svg.svg";
-import BlogSvg from "../assets/images/svg/blog-svg.svg";
 import ContactSvg from "../assets/images/svg/contact-svg.svg";
-import clientImg1 from "../assets/images/clients-img1.jpg";
-import clientImg2 from "../assets/images/clients-img2.jpg";
-import clientImg3 from "../assets/images/clients-img3.jpg";
-import clientImg4 from "../assets/images/clients-img4.jpg";
 import JessicaMainImg from "../assets/images/jessica-main-img.png";
 import CircularImg from "../assets/images/circular-img.png";
 import FlowerImg from "../assets/images/flower.png";
-import BrandLogo1 from "../assets/images/brand-logo1.png";
-import BrandLogo2 from "../assets/images/brand-logo2.png";
-import BrandLogo3 from "../assets/images/brand-logo3.png";
-import BrandLogo4 from "../assets/images/brand-logo4.png";
-import BrandLogo5 from "../assets/images/brand-logo5.png";
-import BrandLogo6 from "../assets/images/brand-logo6.png";
-import BrandLogo7 from "../assets/images/brand-logo7.png";
-import BrandLogo8 from "../assets/images/brand-logo8.png";
+import reactIcon from '../assets/images/react.svg';
+import reduxIcon from '../assets/images/redux.svg';
+import htmlIcon from '../assets/images/html.svg';
+import cssIcon from '../assets/images/css.svg';
+import sassIcon from '../assets/images/sass.svg';
+import tailwindIcon from '../assets/images/tailwind.svg';
+import bootstrap from '../assets/images/bootstrap.svg'
+import jsIcon from '../assets/images/js.svg';
+import vueIcon from '../assets/images/vue.svg';
+import githubIcon from '../assets/images/github.svg'
+import storybook from '../assets/images/storybook.svg';
+import gsap from '../assets/images/gsap.svg';
+import pinia from '../assets/images/pinia.svg'
 import AboutSection from "./About";
 import Resume from "./Resume";
 import Services from "./Services";
 import Portfolio from "./Portfolio";
-import Pricing from "./Pricing";
-import Blog from "./Blog";
+// import Pricing from "./Pricing";
+// import Blog from "./Blog";
 import Contact from "./Contact";
 import $ from "jquery";
 import CV from "../assets/pdf/olivia_resume.pdf";
 import { Link } from "react-router-dom";
 const Home = () => {
   //Text
-  const firstTexts = ["Designer", "Developer", "Freelancer"];
+  const firstTexts = ["Developer", "Developer", "Freelancer"];
   const secondTexts = [
     "Freelancer",
     "Back-End Web Developer",
     "Full Stack Developer",
   ];
-  const intervalTime = 600;
+  // const intervalTime = 600;
 
   const [firstTextIndex, setFirstTextIndex] = useState(0);
   const [secondTextIndex, setSecondTextIndex] = useState(0);
 
-  useEffect(() => {
-    const firstTextTimeout = setTimeout(() => {
-      setFirstTextIndex((prevIndex) => (prevIndex + 1) % firstTexts.length);
-    }, intervalTime * 3);
-
-    return () => clearTimeout(firstTextTimeout);
-  }, [firstTextIndex]);
-
-  useEffect(() => {
-    const secondTextTimeout = setTimeout(() => {
-      setSecondTextIndex((prevIndex) => (prevIndex + 1) % secondTexts.length);
-    }, intervalTime * 3);
-
-    return () => clearTimeout(secondTextTimeout);
-  }, [secondTextIndex]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFirstTextIndex((prevIndex) => (prevIndex + 1) % firstTexts.length);
-      setSecondTextIndex((prevIndex) => (prevIndex + 1) % secondTexts.length);
-    }, intervalTime * 7);
-
-    return () => clearInterval(interval);
-  }, []);
+ 
 
   // Logo marquee
   useEffect(() => {
@@ -150,16 +126,18 @@ const Home = () => {
       {/* <!-- ====================================== Side Menu ===================================== --> */}
       <div className="side-menu">
         <div className="profile-img-main">
-          <img className="zoom_in" src={ProfileImg} alt="profile-img" />
+          <div className="profile-img-main__wrapper">
+            <img className="zoom_in" src={ProfileImg} alt="profile-img" />
+          </div>
           <h1 className="fade_up">
-            Jessica <span>Biogi</span>
+            Xorozov <span>Shahzod</span>
           </h1>
           <h2 className="designer fade_up">{firstTexts[firstTextIndex]}</h2>
           <div className="profile-media-icons-main fade_up">
             <Link to="mailto:hello@biogi.com" className="profile-media-icons">
               <img src={EmailSvg} alt="email-svg" />
             </Link>
-            <Link to="https://www.behance.net" className="profile-media-icons">
+            <Link to="hhttps://t.me/xorozov_shahzod" className="profile-media-icons">
               <img src={BehanceSvg} alt="behance-svg" />
             </Link>
             <Link to="https://dribbble.com" className="profile-media-icons">
@@ -173,9 +151,8 @@ const Home = () => {
         <div className="menu-list-main">
           <ul>
             <li
-              className={`active-menu-action ${
-                activeLink === "home" ? "active" : ""
-              }`}
+              className={`active-menu-action ${activeLink === "home" ? "active" : ""
+                }`}
             >
               <a
                 className="fade_right"
@@ -187,9 +164,8 @@ const Home = () => {
               </a>
             </li>
             <li
-              className={`active-menu-action ${
-                activeLink === "about" ? "active" : ""
-              }`}
+              className={`active-menu-action ${activeLink === "about" ? "active" : ""
+                }`}
             >
               <a
                 className="fade_right"
@@ -201,9 +177,8 @@ const Home = () => {
               </a>
             </li>
             <li
-              className={`active-menu-action ${
-                activeLink === "resume" ? "active" : ""
-              }`}
+              className={`active-menu-action ${activeLink === "resume" ? "active" : ""
+                }`}
             >
               <a
                 className="fade_right"
@@ -215,9 +190,8 @@ const Home = () => {
               </a>
             </li>
             <li
-              className={`active-menu-action ${
-                activeLink === "services" ? "active" : ""
-              }`}
+              className={`active-menu-action ${activeLink === "services" ? "active" : ""
+                }`}
             >
               <a
                 className="fade_right"
@@ -229,9 +203,8 @@ const Home = () => {
               </a>
             </li>
             <li
-              className={`active-menu-action ${
-                activeLink === "portfolio" ? "active" : ""
-              }`}
+              className={`active-menu-action ${activeLink === "portfolio" ? "active" : ""
+                }`}
             >
               <a
                 className="fade_right"
@@ -242,38 +215,10 @@ const Home = () => {
                 Portfolio
               </a>
             </li>
+        
             <li
-              className={`active-menu-action ${
-                activeLink === "pricing" ? "active" : ""
-              }`}
-            >
-              <a
-                className="fade_right"
-                href="#pricing"
-                onClick={(e) => handleClick(e, "pricing")}
-              >
-                <img src={PricingSvg} alt="home-svg" />
-                Pricing
-              </a>
-            </li>
-            <li
-              className={`active-menu-action ${
-                activeLink === "blog" ? "active" : ""
-              }`}
-            >
-              <a
-                className="fade_right"
-                href="#blog"
-                onClick={(e) => handleClick(e, "blog")}
-              >
-                <img src={BlogSvg} alt="home-svg" />
-                Blog
-              </a>
-            </li>
-            <li
-              className={`active-menu-action ${
-                activeLink === "contact" ? "active" : ""
-              }`}
+              className={`active-menu-action ${activeLink === "contact" ? "active" : ""
+                }`}
               id="contact-line"
             >
               <a
@@ -324,7 +269,7 @@ const Home = () => {
           <div className="row">
             <div className="col-xxl-6 col-lg-6">
               <h2 className="jessica-main-text zoom_in">
-                Jessica <span>Biogi</span>
+                Xorozov <span>Shahzod</span>
               </h2>
               <h3 className="back-End-dev designer2">
                 {secondTexts[secondTextIndex]}
@@ -358,32 +303,6 @@ const Home = () => {
                 src={JessicaMainImg}
                 alt="jessica-main-img"
               />
-              <div className="worked-box">
-                <p className="worked-more">Worked with more than 100 people</p>
-                <div className="client-img-main position-relative">
-                  <img
-                    className="client-img client-img1"
-                    src={clientImg1}
-                    alt="clients-img1"
-                  />
-                  <img
-                    className="client-img client-img2"
-                    src={clientImg2}
-                    alt="clients-img2"
-                  />
-                  <img
-                    className="client-img client-img3"
-                    src={clientImg3}
-                    alt="clients-img3"
-                  />
-                  <img
-                    className="client-img client-img4"
-                    src={clientImg4}
-                    alt="clients-img4"
-                  />
-                  <p className="worked-more worked-more2"> 100+ Clients</p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -396,63 +315,91 @@ const Home = () => {
                 <div className="marquee-img-main">
                   <img
                     className="brand-logos"
-                    src={BrandLogo1}
+                    src={htmlIcon}
                     alt="brand-logo1"
                   />
                 </div>
                 <div className="marquee-img-main">
                   <img
                     className="brand-logos"
-                    src={BrandLogo2}
+                    src={cssIcon}
                     alt="brand-logo2"
                   />
                 </div>
                 <div className="marquee-img-main">
                   <img
                     className="brand-logos"
-                    src={BrandLogo3}
+                    src={sassIcon}
                     alt="brand-logo3"
                   />
                 </div>
                 <div className="marquee-img-main">
                   <img
                     className="brand-logos"
-                    src={BrandLogo4}
+                    src={tailwindIcon}
+                    alt="brand-logo3"
+                  />
+                </div>
+                <div className="marquee-img-main">
+                  <img
+                    className="brand-logos"
+                    src={bootstrap}
+                    alt="brand-logo3"
+                  />
+                </div>
+                <div className="marquee-img-main">
+                  <img
+                    className="brand-logos"
+                    src={jsIcon}
                     alt="brand-logo4"
                   />
                 </div>
                 <div className="marquee-img-main">
                   <img
                     className="brand-logos"
-                    src={BrandLogo5}
+                    src={reactIcon}
                     alt="brand-logo5"
                   />
                 </div>
                 <div className="marquee-img-main">
                   <img
                     className="brand-logos"
-                    src={BrandLogo6}
+                    src={reduxIcon}
                     alt="brand-logo6"
                   />
                 </div>
                 <div className="marquee-img-main">
                   <img
                     className="brand-logos"
-                    src={BrandLogo7}
+                    src={vueIcon}
                     alt="brand-logo7"
                   />
                 </div>
                 <div className="marquee-img-main">
                   <img
                     className="brand-logos"
-                    src={BrandLogo8}
+                    src={pinia}
+                    alt="brand-logo7"
+                  />
+                </div>
+                <div className="marquee-img-main">
+                  <img
+                    className="brand-logos"
+                    src={storybook}
                     alt="brand-logo8"
                   />
                 </div>
                 <div className="marquee-img-main">
                   <img
                     className="brand-logos"
-                    src={BrandLogo7}
+                    src={githubIcon}
+                    alt="brand-logo9"
+                  />
+                </div>
+                <div className="marquee-img-main">
+                  <img
+                    className="brand-logos"
+                    src={gsap}
                     alt="brand-logo9"
                   />
                 </div>
@@ -468,16 +415,16 @@ const Home = () => {
         <Resume />
         {/* <!-- ====================================== Section Education Experience End ===================================== --> */}
         {/* <!-- ====================================== Section Services ===================================== --> */}
-        <Services />
+        {/* <Services /> */}
         {/* <!-- ====================================== Section Services ===================================== --> */}
         {/* <!-- ====================================== Section Portfolio ===================================== --> */}
         <Portfolio />
         {/* <!-- ====================================== Section Portfolio ===================================== --> */}
         {/* <!-- ====================================== Section Pricing ===================================== --> */}
-        <Pricing />
+        {/* <Pricing /> */}
         {/* <!-- ====================================== Section Pricing ===================================== --> */}
         {/* <!-- ====================================== Section Blogs ===================================== --> */}
-        <Blog />
+        {/* <Blog /> */}
         {/* <!-- ====================================== Section Blogs ===================================== --> */}
         {/* <!-- ====================================== Section Contact ===================================== --> */}
         <Contact />

@@ -8,6 +8,9 @@ import WinnerAward from "../assets/images/winner-award.png";
 import WinnerAward2 from "../assets/images/winner-award2.png";
 import WinnerAward3 from "../assets/images/winner-award3.png";
 import WinnerAward4 from "../assets/images/winner-award4.png";
+import htmlSertificate from '../assets/images/HTML_certificate.jpg';
+import cssSertificate from '../assets/images/CSS_certificate.jpg';
+import responsiveDesign from '../assets/images/Responsive-Web-Design_certificate.jpg'
 
 const Resume = () => {
   const colors = [
@@ -76,14 +79,12 @@ const Resume = () => {
                 </div>
               </div>
               <div className="small_yellow_border_main">
-                <p className="bachelor">Master in Design</p>
+                <p className="bachelor">Bachelor's degree</p>
                 <p className="cursus university">
-                  Cambridge University / 2010 - 2014
+                  Samarkand Institute of Economics and Service / 2017 - 2021
                 </p>
                 <p className="cursus">
-                  Eu nulla at mauris cursus consectetur posuere iaculis ipsum
-                  neque. Morbi felis pellentesque ligula sed dictumst imperdiet
-                  nunc vulputate.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum tempore et atque laborum! Fugit explicabo delectus minima sed optio?
                 </p>
               </div>
             </div>
@@ -94,34 +95,17 @@ const Resume = () => {
                 </div>
               </div>
               <div className="small_yellow_border_main">
-                <p className="bachelor">Bachelor in Science</p>
+                <p className="bachelor">Frontend Bootcamp Course</p>
                 <p className="cursus university">
-                  Cambridge University / 2014 - 2016
+                  PDP Academy / 2021 - 2022
                 </p>
                 <p className="cursus">
-                  Porttitor euismod at semper ut massa. Lorem varius magna
-                  volutpat nunc. Et faucibus scelerisque donec augue eleifenda
-                  morbi.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius pariatur cumque animi, reprehenderit beatae deserunt suscipit facere in fuga quasi.
                 </p>
               </div>
             </div>
             <div className="education position-relative fade_up">
-              <div className="side_circle_ring">
-                <div className="small_yellow_border">
-                  <div className="small_yellow_circle"></div>
-                </div>
-              </div>
-              <div className="small_yellow_border_main">
-                <p className="bachelor">Diploma in Computer</p>
-                <p className="cursus university">
-                  Cambridge University / 2016 - 2018
-                </p>
-                <p className="cursus">
-                  Adipiscing sed magna tempus arcu morbi. Ipsum pellentesque
-                  lorem suscipit in. Hendrerit rhoncus quis tempor urna pharetra
-                  ut erat.
-                </p>
-              </div>
+
             </div>
           </div>
           <div className="col-xxl-6 col-lg-6">
@@ -138,8 +122,8 @@ const Resume = () => {
                 </div>
               </div>
               <div className="small_yellow_border_main">
-                <p className="bachelor">LEAD DESIGN & DEVELOPMENT</p>
-                <p className="cursus university">Envato / 2020 - Current</p>
+                <p className="bachelor">Frontend developer</p>
+                <p className="cursus university">Online Service Group / 01.01.2024 - Current</p>
                 <p className="cursus">
                   Ipsum erat duis leo lectus tellus neque dictumst. Dignissim
                   tortor quis nisl mi lectus. Massa facilisis ac eget fermentum
@@ -154,8 +138,8 @@ const Resume = () => {
                 </div>
               </div>
               <div className="small_yellow_border_main">
-                <p className="bachelor">SENIOR DESIGN & DEVELOPEMNT</p>
-                <p className="cursus university">Apple / 2019 - 2020</p>
+                <p className="bachelor">Frontend developer</p>
+                <p className="cursus university">Algorithm Counsulting Group / 01.11.2022 - 29.11.2023</p>
                 <p className="cursus">
                   Congue dolor gravida eu tristique netus posuere dolor.
                   Penatibus imperdiet egestas ut sit scelerisque sapien a lor
@@ -170,8 +154,8 @@ const Resume = () => {
                 </div>
               </div>
               <div className="small_yellow_border_main">
-                <p className="bachelor">JUNIOR DESIGN & DEVELOPMENT</p>
-                <p className="cursus university">Twitter / 2018 - 2019</p>
+                <p className="bachelor">Junior frontend developer</p>
+                <p className="cursus university">UIC Group / 15.05.2022 - 10.10.2022</p>
                 <p className="cursus">
                   Aliquet at interdum pellentesque non fringilla eget orci
                   suspendisse. A iaculis augue vitae ultricies fusce sit dolor
@@ -184,7 +168,7 @@ const Resume = () => {
       </section>
       {/* <!-- ====================================== Section Education Experience End ===================================== --> */}
       {/* <!-- ====================================== Section Coding Skill ===================================== --> */}
-      <section className="coding-skill-section">
+      <section className="coding-skill-section" style={{ display: 'none' }}>
         <div className="heading-container">
           <h2 className="section-heading-text coding-skill-text fade_up">
             Coding Skills.
@@ -192,7 +176,7 @@ const Resume = () => {
           <div className="line"></div>
         </div>
         <div id="progress" ref={progressRef}>
-          <div data-num="79" className="progress-item fade_up">
+          <div data-num="100" className="progress-item fade_up">
             sd
           </div>
           <div data-num="92" className="progress-item fade_up">
@@ -214,7 +198,7 @@ const Resume = () => {
       </section>
       {/* <!-- ====================================== Section Coding Skill End ===================================== --> */}
       {/* <!-- ====================================== Section Design Skill ===================================== --> */}
-      <section className="design-skill-section">
+      <section className="design-skill-section" style={{ display: 'none' }}>
         <div className="heading-container">
           <h2 className="section-heading-text design-skill-text fade_up">
             Design Skills.
@@ -278,13 +262,13 @@ const Resume = () => {
                     <div className="years-award-img">
                       <img
                         className="winner-award"
-                        src={WinnerAward}
+                        src={htmlSertificate}
                         alt="winner-award4"
                       />
-                      <p className="award-yer">2025</p>
+                      {/* <p className="award-yer"></p> */}
                     </div>
-                    <p className="award-interior">Awwwards Interior</p>
-                    <p className="award-winner-text">Winner</p>
+                    <p className="award-interior">SOLOLEARN HTML5 course - 2021</p>
+                    {/* <p className="award-winner-text"></p> */}
                   </div>
                 </div>
                 <div className="flip-box-back">
@@ -306,13 +290,13 @@ const Resume = () => {
                     <div className="years-award-img">
                       <img
                         className="winner-award"
-                        src={WinnerAward2}
+                        src={cssSertificate}
                         alt="winner-award2"
                       />
-                      <p className="award-yer">2024</p>
+                      {/* <p className="award-yer"></p> */}
                     </div>
-                    <p className="award-interior">The Webby Awards</p>
-                    <p className="award-winner-text">Nominee</p>
+                    <p className="award-interior">SOLOLEARN CCS course - 2021</p>
+                    {/* <p className="award-winner-text"></p> */}
                   </div>
                 </div>
                 <div className="flip-box-back">
@@ -334,13 +318,13 @@ const Resume = () => {
                     <div className="years-award-img">
                       <img
                         className="winner-award"
-                        src={WinnerAward3}
+                        src={responsiveDesign}
                         alt="winner-award3"
                       />
-                      <p className="award-yer">2023</p>
+                      {/* <p className="award-yer"></p> */}
                     </div>
-                    <p className="award-interior">EWA Design</p>
-                    <p className="award-winner-text">Winner</p>
+                    <p className="award-interior"> SOLOLEARN Resposive Webdesign - 2021</p>
+                    {/* <p className="award-winner-text"></p> */}
                   </div>
                 </div>
                 <div className="flip-box-back">
@@ -354,34 +338,7 @@ const Resume = () => {
               </div>
             </div>
           </div>
-          <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-            <div className="box-item flip_up">
-              <div className="flip-box">
-                <div className="flip-box-front">
-                  <div className="inner">
-                    <div className="years-award-img">
-                      <img
-                        className="winner-award"
-                        src={WinnerAward4}
-                        alt="winner-award4"
-                      />
-                      <p className="award-yer">2022</p>
-                    </div>
-                    <p className="award-interior">BEST Star</p>
-                    <p className="award-winner-text">Winner</p>
-                  </div>
-                </div>
-                <div className="flip-box-back">
-                  <div className="inner">
-                    <p className="flip-back-text">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Sit, perferendis!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      
         </div>
       </section>
       {/* <!-- ====================================== Section Award End ===================================== --> */}

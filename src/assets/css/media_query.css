@@ -52,7 +52,7 @@
 
     .jessica-main-text {
         font-size: 80px;
-        line-height: 90px;
+        /* line-height: 90px; */
     }
 
     .section-one {
@@ -352,7 +352,7 @@
 
     .jessica-main-text {
         font-size: 60px;
-        line-height: 70px;
+        /* line-height: 70px; */
     }
 
     .back-End-dev {
@@ -636,7 +636,7 @@
 @media(max-width:500px) {
     .jessica-main-text {
         font-size: 47px;
-        line-height: 50px;
+        /* line-height: 50px; */
     }
 
     .best {
