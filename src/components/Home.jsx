@@ -28,11 +28,9 @@ import pinia from '../assets/images/pinia.svg'
 import AboutSection from "./About";
 import Resume from "./Resume";
 import Portfolio from "./Portfolio";
-// import Pricing from "./Pricing";
-// import Blog from "./Blog";
 import Contact from "./Contact";
 import $ from "jquery";
-import CV from "../assets/pdf/olivia_resume.pdf";
+import CV from "../assets/pdf/Shahzod.pdf";
 import { Link } from "react-router-dom";
 const Home = () => {
   //Text
