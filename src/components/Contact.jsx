@@ -8,30 +8,30 @@ const Contact = () => {
     message: "",
   });
 
-  useEffect(() => {
-    const inputs = document.querySelectorAll("input");
+  // useEffect(() => {
+  //   const inputs = document.querySelectorAll("input");
 
-    inputs.forEach((input) => {
-      input.addEventListener("focus", () => {
-        input.parentElement.classNameList.add("active");
-      });
+  //   inputs.forEach((input) => {
+  //     input.addEventListener("focus", () => {
+  //       input.parentElement.classNameList.add("active");
+  //     });
 
-      input.addEventListener("focusout", () => {
-        if (input.value === "") {
-          input.parentElement.classNameList.remove("active");
-        } else {
-          input.parentElement.classNameList.add("active");
-        }
-      });
-    });
+  //     input.addEventListener("focusout", () => {
+  //       if (input.value === "") {
+  //         input.parentElement.classNameList.remove("active");
+  //       } else {
+  //         input.parentElement.classNameList.add("active");
+  //       }
+  //     });
+  //   });
 
-    return () => {
-      inputs.forEach((input) => {
-        input.removeEventListener("focus", () => { });
-        input.removeEventListener("focusout", () => { });
-      });
-    };
-  }, []);
+  //   return () => {
+  //     inputs.forEach((input) => {
+  //       input.removeEventListener("focus", () => { });
+  //       input.removeEventListener("focusout", () => { });
+  //     });
+  //   };
+  // }, []);
 
   const handleChange = (e) => {
     const { id, value } = e.target;
@@ -58,8 +58,8 @@ const Contact = () => {
             <div className="mobile-icon-main">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="48"
-                height="48"
+                width="30"
+                height="30"
                 viewBox="0 0 48 48"
                 fill="none"
               >
@@ -72,7 +72,7 @@ const Contact = () => {
             <div>
               <p className="contact-email-text">EMAIL</p>
               <p className="contact-email">
-                <a href="mailto:hello@biogi.com">hello@biogi.com</a>
+                <a href="mailto:xorozovshohzod@gmail.com" target="_blank">xorozovshohzod@gmail.com</a>
               </p>
             </div>
           </div>
@@ -80,8 +80,8 @@ const Contact = () => {
             <div className="mobile-icon-main">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="48"
-                height="48"
+                width="30"
+                height="30"
                 viewBox="0 0 48 48"
                 fill="none"
               >
@@ -94,7 +94,7 @@ const Contact = () => {
             <div>
               <p className="contact-email-text">PHONE</p>
               <p className="contact-email">
-                <a href="tel:+12345678899">+1 234 567 8899</a>
+                <a href="tel:+998933369404" target="_blank">+998933369404</a>
               </p>
             </div>
           </div>

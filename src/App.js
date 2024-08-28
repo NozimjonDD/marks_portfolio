@@ -6,7 +6,6 @@ import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
 import Home from "./components/Home";
 import { useEffect, useState, useRef } from "react";
-import LoaderGif from "./assets/images/loader.gif";
 import loadingImg from "./assets/images/load_gif.gif";
 
 function App() {

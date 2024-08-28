@@ -1,13 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import FigmaImg from "../assets/images/figma-img.png";
-import PhotoShopImg from "../assets/images/photoshop-img.png";
-import AdobeImg from "../assets/images/adobe-xd-img.png";
-import SketchImg from "../assets/images/sktech-img.png";
-import InvisionImg from "../assets/images/invision-img.png";
-import WinnerAward from "../assets/images/winner-award.png";
-import WinnerAward2 from "../assets/images/winner-award2.png";
-import WinnerAward3 from "../assets/images/winner-award3.png";
-import WinnerAward4 from "../assets/images/winner-award4.png";
 import htmlSertificate from '../assets/images/HTML_certificate.jpg';
 import cssSertificate from '../assets/images/CSS_certificate.jpg';
 import responsiveDesign from '../assets/images/Responsive-Web-Design_certificate.jpg'
@@ -84,7 +75,8 @@ const Resume = () => {
                   Samarkand Institute of Economics and Service / 2017 - 2021
                 </p>
                 <p className="cursus">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt nostrum tempore et atque laborum! Fugit explicabo delectus minima sed optio?
+                  I was admitted to this university in 2017. During my studies, I gained extensive knowledge and practical skills in the fields of tourism,
+                  finance and economics. During this period, I thoroughly studied the theoretical foundations of these fields, as well as mastered their practical application.
                 </p>
               </div>
             </div>
@@ -100,7 +92,10 @@ const Resume = () => {
                   PDP Academy / 2021 - 2022
                 </p>
                 <p className="cursus">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius pariatur cumque animi, reprehenderit beatae deserunt suscipit facere in fuga quasi.
+                  I studied at PDP Academy's Foundation Course from August 1, 2021. After successfully completing the Foundation course,
+                  I continued studying at the Frontend Bootcamp course. During this 7-month training period,
+                  I thoroughly mastered languages ​​and technologies such as HTML, CSS, Bootstrap, JavaScript, React and Redux.
+                  During these courses, I gained not only theoretical knowledge, but also practical skills.
                 </p>
               </div>
             </div>
@@ -125,9 +120,10 @@ const Resume = () => {
                 <p className="bachelor">Frontend developer</p>
                 <p className="cursus university">Online Service Group / 01.01.2024 - Current</p>
                 <p className="cursus">
-                  Ipsum erat duis leo lectus tellus neque dictumst. Dignissim
-                  tortor quis nisl mi lectus. Massa facilisis ac eget fermentum
-                  vitae. Dictum rutrum sed.
+                  Currently, I am working as a frontend developer at Online Service Group. Here,
+                  I am involved in creating user interfaces using modern technologies and advanced approaches.
+                  My responsibilities include implementing UI/UX designs for projects, optimizing code, and ensuring functionality. Additionally,
+                  I actively participate in team projects, collaborating with other developers and designers to further strengthen my skills.
                 </p>
               </div>
             </div>
@@ -141,9 +137,9 @@ const Resume = () => {
                 <p className="bachelor">Frontend developer</p>
                 <p className="cursus university">Algorithm Counsulting Group / 01.11.2022 - 29.11.2023</p>
                 <p className="cursus">
-                  Congue dolor gravida eu tristique netus posuere dolor.
-                  Penatibus imperdiet egestas ut sit scelerisque sapien a lor
-                  sjsa.
+                  Worked as a frontend developer at a company specializing in ERP (Enterprise Resource Planning) projects.
+                  These systems help businesses streamline and automate their operations, enhancing efficiency and effectiveness. Over the course of a year,
+                  I utilized technologies such as HTML5, Bootstrap4, CSS, JavaScript, jQuery, and Chart.js to successfully complete three large-scale projects from start to finish.
                 </p>
               </div>
             </div>
@@ -157,9 +153,8 @@ const Resume = () => {
                 <p className="bachelor">Junior frontend developer</p>
                 <p className="cursus university">UIC Group / 15.05.2022 - 10.10.2022</p>
                 <p className="cursus">
-                  Aliquet at interdum pellentesque non fringilla eget orci
-                  suspendisse. A iaculis augue vitae ultricies fusce sit dolor
-                  gravida .
+                  Worked at UIC Group for over 5 months, where I gained valuable experience and learned many new skills. I was part of a collaborative and supportive team,
+                  surrounded by open-minded, communicative, and friendly developers. This environment fostered both my professional growth and my ability to work effectively within a team.
                 </p>
               </div>
             </div>
@@ -198,52 +193,7 @@ const Resume = () => {
       </section>
       {/* <!-- ====================================== Section Coding Skill End ===================================== --> */}
       {/* <!-- ====================================== Section Design Skill ===================================== --> */}
-      <section className="design-skill-section" style={{ display: 'none' }}>
-        <div className="heading-container">
-          <h2 className="section-heading-text design-skill-text fade_up">
-            Design Skills.
-          </h2>
-          <div className="line"></div>
-        </div>
-        <div className="design-skill-sub-section">
-          <div className="design-skills-img-main flip_up">
-            <img src={FigmaImg} alt="figma-img" />
-            <div className="skill-counter-main">
-              <p>94%</p>
-              <p>HTML, CSS</p>
-            </div>
-          </div>
-          <div className="design-skills-img-main photoshop flip_up">
-            <img src={PhotoShopImg} alt="photoshop-img" />
-            <div className="skill-counter-main photoshop-text">
-              <p>98%</p>
-              <p>PHOTOSHOP</p>
-            </div>
-          </div>
-          <div className="design-skills-img-main adobe-xd flip_up">
-            <img src={AdobeImg} alt="adobe-xd-img" />
-            <div className="skill-counter-main adobe-xd-text">
-              <p>88%</p>
-              <p>ADOBE XD</p>
-            </div>
-          </div>
-
-          <div className="design-skills-img-main sketch flip_up">
-            <img src={SketchImg} alt="sktech-img" />
-            <div className="skill-counter-main sketch-text">
-              <p>85%</p>
-              <p>SKETCH</p>
-            </div>
-          </div>
-          <div className="design-skills-img-main invision flip_up">
-            <img src={InvisionImg} alt="invision-img" />
-            <div className="skill-counter-main invision-text">
-              <p>89%</p>
-              <p>INVISION</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      
       {/* <!-- ====================================== Section Coding Skill End ===================================== --> */}
       {/* <!-- ====================================== Section Award ===================================== --> */}
       <section className="awards-section overflow-hidden">
@@ -274,8 +224,7 @@ const Resume = () => {
                 <div className="flip-box-back">
                   <div className="inner">
                     <p className="flip-back-text">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Sit, perferendis!
+                      Completed the SOLOLEARN HTML5 course in 2021, gaining proficiency in HTML5 syntax, semantic elements, multimedia integration, and forms through practical exercises and projects.
                     </p>
                   </div>
                 </div>
@@ -302,8 +251,7 @@ const Resume = () => {
                 <div className="flip-box-back">
                   <div className="inner">
                     <p className="flip-back-text">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Sit, perferendis!
+                      Completed the SOLOLEARN CSS course in 2021, mastering CSS syntax, styling techniques, responsive design, and layout principles through hands-on projects and exercises.
                     </p>
                   </div>
                 </div>
@@ -324,21 +272,20 @@ const Resume = () => {
                       {/* <p className="award-yer"></p> */}
                     </div>
                     <p className="award-interior"> SOLOLEARN Resposive Webdesign - 2021</p>
-                    {/* <p className="award-winner-text"></p> */}
                   </div>
                 </div>
                 <div className="flip-box-back">
                   <div className="inner">
                     <p className="flip-back-text">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Sit, perferendis!
+                      Completed the SOLOLEARN Responsive Web Design course in 2021,
+                      focusing on creating adaptable and user-friendly web layouts using responsive design techniques, media queries, and flexible grid systems.
                     </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-      
+
         </div>
       </section>
       {/* <!-- ====================================== Section Award End ===================================== --> */}

@@ -1,13 +1,12 @@
 import React, { useEffect,  useState } from "react";
 import ProfileImg from "../assets/images/avatar.png";
 import EmailSvg from "../assets/images/svg/email-svg.svg";
-import BehanceSvg from "../assets/images/svg/behance-svg.svg";
-import DribleSvg from "../assets/images/svg/drribale-svg.svg";
-import MediumSvg from "../assets/images/svg/medium-svg.svg";
+import  telegram from '../assets/images/telegram.svg';
+import linkedin from '../assets/images/linkedin-svgrepo-com.svg'
+import github from '../assets/images/github-icon.svg'
 import HomeSvg from "../assets/images/svg/home-svg.svg";
 import AboutSvg from "../assets/images/svg/about-svg.svg";
 import ResumeSvg from "../assets/images/svg/resume-svg.svg";
-import ServicesSvg from "../assets/images/svg/services-svg.svg";
 import PortfolioSvg from "../assets/images/svg/portfolio-svg.svg";
 import ContactSvg from "../assets/images/svg/contact-svg.svg";
 import JessicaMainImg from "../assets/images/jessica-main-img.png";
@@ -28,7 +27,6 @@ import gsap from '../assets/images/gsap.svg';
 import pinia from '../assets/images/pinia.svg'
 import AboutSection from "./About";
 import Resume from "./Resume";
-import Services from "./Services";
 import Portfolio from "./Portfolio";
 // import Pricing from "./Pricing";
 // import Blog from "./Blog";
@@ -134,18 +132,18 @@ const Home = () => {
           </h1>
           <h2 className="designer fade_up">{firstTexts[firstTextIndex]}</h2>
           <div className="profile-media-icons-main fade_up">
-            <Link to="mailto:hello@biogi.com" className="profile-media-icons">
+            <a href="mailto:hello@biogi.com"  target="_blank" className="profile-media-icons">
               <img src={EmailSvg} alt="email-svg" />
-            </Link>
-            <Link to="hhttps://t.me/xorozov_shahzod" className="profile-media-icons">
-              <img src={BehanceSvg} alt="behance-svg" />
-            </Link>
-            <Link to="https://dribbble.com" className="profile-media-icons">
-              <img src={DribleSvg} alt="drribale-svg" />
-            </Link>
-            <Link to="https://medium.com" className="profile-media-icons">
-              <img src={MediumSvg} alt="medium-svg" />
-            </Link>
+            </a>
+            <a href="https://t.me/xorozov_shahzod" target="_blank" className="profile-media-icons">
+              <img src={telegram} alt="behance-svg" />
+            </a>
+            <a href="https://www.linkedin.com/in/shahzodjon-xo-rozov-b266b2217/" target="_blank" className="profile-media-icons">
+              <img src={linkedin} alt="drribale-svg" />
+            </a>
+            <a href="https://github.com/Shohzodjon" target="_blank" className="profile-media-icons">
+              <img src={github} alt="medium-svg" />
+            </a>
           </div>
         </div>
         <div className="menu-list-main">
@@ -189,19 +187,7 @@ const Home = () => {
                 Resume
               </a>
             </li>
-            <li
-              className={`active-menu-action ${activeLink === "services" ? "active" : ""
-                }`}
-            >
-              <a
-                className="fade_right"
-                href="#services"
-                onClick={(e) => handleClick(e, "services")}
-              >
-                <img src={ServicesSvg} alt="home-svg" />
-                Services
-              </a>
-            </li>
+        
             <li
               className={`active-menu-action ${activeLink === "portfolio" ? "active" : ""
                 }`}
@@ -257,7 +243,7 @@ const Home = () => {
               </span>
               <span className="title">Download CV</span>
               <span className="title-hover">Click Here</span>
-            </Link>{" "}
+            </Link>
           </div>
         </div>
       </div>

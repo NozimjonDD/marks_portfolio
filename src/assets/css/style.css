@@ -27,6 +27,12 @@
 20.Whole Page Aniamtion CSS
 ------------------------------------------------------------------ */
 /*-----------------------[ 1.Default CSS ]------------------------*/
+
+
+/* $blue-800: #0754c8; */
+/* $blue-700: #007bfe; */
+/* $blue-600: #335fa9; */
+
 * {
     margin: 0;
     padding: 0;
@@ -261,20 +267,27 @@ ul li {
     padding: 20px 20px 0 20px;
 }
 
-.profile-img-main__wrapper{
+.profile-img-main__wrapper {
     border: 1px solid #fff;
+    border-radius: 50%;
+    height: 210px;
+    overflow: hidden;
 }
-.profile-img-main img {
-    max-width: 100%;
+
+.profile-img-main__wrapper img {
+    width: 95%;
+    height: 98%;
 }
+
+
 
 h1 {
     color: var(--1, #FFF) !important;
     text-align: center;
-    font-size: 32px !important;
+    font-size: 28px !important;
     font-weight: 700 !important;
     line-height: normal !important;
-    padding: 15px 0 5px 0;
+    margin: 20px 0 5px 0;
 }
 
 h1 span {
@@ -308,8 +321,18 @@ h1 span {
     transition: all 0.3s;
 }
 
+.profile-media-icons img {
+    width: 25px;
+    height: 25px;
+}
+
+.profile-media-icons:last-child img {
+    width: 30px;
+    height: 30px;
+}
+
 .profile-media-icons:hover {
-    background: #FF759C;
+    background: #00CC97;
 }
 
 .menu-list-main ul li {
@@ -361,7 +384,7 @@ h1 span {
 }
 
 .btn-slide:hover {
-    background-color: #FF759C;
+    background-color: #00CC97;
 }
 
 .btn-slide:hover span.circle {
@@ -371,7 +394,7 @@ h1 span {
 }
 
 .btn-slide:hover span.circle .download-svg {
-    fill: #FF759C;
+    fill: #00CC97;
 }
 
 .btn-slide:hover span.title {
@@ -386,7 +409,7 @@ h1 span {
 
 .btn-slide span.circle {
     display: block;
-    background-color: #FF759C;
+    background-color: #00CC97;
     position: absolute;
     margin: 5px;
     line-height: 42px;
@@ -443,9 +466,9 @@ h1 span {
 
 .jessica-main-text {
     color: var(--1, #FFF);
-    font-size: 80px;
+    font-size: 70px;
     font-weight: 700;
-    line-height: 130%;
+    line-height: 120%;
 }
 
 .jessica-main-text span {
@@ -456,8 +479,8 @@ h1 span {
     color: var(--7, #FF759C);
     font-size: 24px;
     font-weight: 500;
-    line-height: 36px;
-    padding: 20px 0;
+    line-height: 130%;
+    margin: 15px 0;
 }
 
 .best {
@@ -484,23 +507,24 @@ h1 span {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
+    height: 50px;
     text-decoration: none;
     text-align: center;
-    border-radius: 32px;
+    border-radius: 24px;
     color: #0F141C;
-    background: #00CC97;
+    background: #007bfe;
     font-size: 20px;
     font-weight: 500;
     position: relative;
     overflow: hidden;
     transition: all .35s;
+    color: #fff;
     z-index: 1;
     padding: 16px 30px;
 }
 
 .btn-hover2 {
-    background: #FFDB59;
+    background: #55E6A5;
 }
 
 .btn-hover:before,
@@ -511,7 +535,20 @@ h1 span {
     height: 100%;
     top: -100%;
     left: 0;
-    background: #FF759C;
+    background: #55E6A5;
+    z-index: -1;
+    transition: all .35s;
+}
+
+.btn-hover2:before,
+.btn-hover2:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    background: #007bfe;
     z-index: -1;
     transition: all .35s;
 }
@@ -664,7 +701,7 @@ h1 span {
 
 .marquee-img-main {
     border: 1px solid #63636385;
-    padding:10px 20px;
+    padding: 10px 20px;
     border-radius: 10px;
     cursor: pointer;
     margin: 0 10px;
@@ -673,7 +710,7 @@ h1 span {
     justify-content: center;
 }
 
-.marquee-img-main  img {
+.marquee-img-main img {
     width: 100px;
     height: 90px;
 }
@@ -791,7 +828,7 @@ h1 span {
     width: 10px;
     height: 10px;
     border-radius: 100%;
-    background-color: #FF759C;
+    background-color: #00CC97;
 }
 
 .bachelor {
@@ -805,7 +842,7 @@ h1 span {
 }
 
 .education:hover .bachelor {
-    color: #FF759C;
+    color: #00CC97;
 }
 
 .university {
@@ -996,7 +1033,7 @@ h1 span {
     -webkit-perspective: inherit;
     perspective: inherit;
     z-index: 2;
-    padding: 10px ;
+    padding: 10px;
     transform: translateY(-50%) translateZ(60px) scale(.94);
     -webkit-transform: translateY(-50%) translateZ(60px) scale(.94);
     -ms-transform: translateY(-50%) translateZ(60px) scale(.94);
@@ -1020,10 +1057,11 @@ h1 span {
     display: flex;
     justify-content: space-between;
 }
-.years-award-img img{
+
+.years-award-img img {
     width: 100%;
-    height:225px;
-    object-fit:cover;
+    height: 225px;
+    object-fit: cover;
 }
 
 .inner p {
@@ -1188,8 +1226,13 @@ h1 span {
 
 /*-----------------------[ 13.Porfoilo-section CSS ]------------------------*/
 .portfolios-group-main img {
-    border-radius: 20px;
     max-width: 100%;
+}
+
+.portfolio__item {
+    border: 2px solid #b3afaf;
+    border-radius: 6px;
+
 }
 
 .portfolios-group-main {
@@ -1202,17 +1245,24 @@ h1 span {
     color: var(--1, #FFF);
     font-size: 20px;
     font-weight: 500;
-    line-height: 30px;
-    padding-top: 10px;
+    line-height: 130%;
+    margin-top: 8px;
+    margin-left: 5px;
+
 }
 
 .Corporate-sub {
     color: var(--14, #909090);
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
-    line-height: 20px;
-    text-transform: uppercase;
-    padding-top: 5px;
+    line-height: 17px;
+    text-transform: capitalize;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .second-row-portfolio {
@@ -1222,6 +1272,8 @@ h1 span {
 .image-container {
     position: relative;
     cursor: pointer;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .overlay {
@@ -1231,7 +1283,7 @@ h1 span {
     width: 100%;
     height: 100%;
     background: #ff759ccc;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1240,12 +1292,12 @@ h1 span {
     transition: opacity 0.3s ease;
 }
 
-.vimeo-icon {
+/* .vimeo-icon {
     width: 64px;
     height: 64px;
     margin-bottom: 10px;
     filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(181deg) brightness(103%) contrast(103%);
-}
+} */
 
 .overlay-text {
     color: #FFF;
@@ -1681,31 +1733,14 @@ li.slick-active {
     margin: 30px 0;
 }
 
-.blog-img-section {
-    background-image: url('../images/blog-img1.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 250px;
-    width: 100%;
-    max-width: 330px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-    border-radius: 20px;
-}
+
 
 .blog-img-section:hover {
     filter: blur(1px);
 }
 
-.blog-img-section2 {
-    background-image: url('../images/blog-img2.png');
-}
 
-.blog-img-section3 {
-    background-image: url('../images/blog-img3.png');
-}
+
 
 .blog-date {
     width: 64px;
@@ -1827,10 +1862,10 @@ li.slick-active {
 
 /*-----------------------[ 19.Contact Section CSS ]------------------------*/
 .mobile-icon-main {
-    width: 80px;
-    height: 80px;
+    width: 42px;
+    height: 42px;
     background: #6F39FD;
-    border-radius: 10px;
+    border-radius: 7px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1853,7 +1888,7 @@ li.slick-active {
 
 .contact-email-text {
     color: var(--14, #909090);
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
     line-height: 20px;
     text-transform: uppercase;
@@ -1862,9 +1897,9 @@ li.slick-active {
 
 .contact-email a {
     color: var(--5, #FFF);
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
-    line-height: 32px;
+    line-height: 130%;
     text-decoration: none;
 }
 
