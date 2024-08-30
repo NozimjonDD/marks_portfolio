@@ -100,17 +100,48 @@ ul li {
     position: fixed;
     top: 0;
     left: 0;
-    background: #0F141C;
+    background: #000;
     z-index: 1000;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.page-loader img {
-    width: 200px;
-    height: auto;
+
+.progress-item {
+    display: flex;
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    animation: 1s ease-out reverse;
+    position: relative;
+}
+
+.loader__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.loader__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.percent__progress {
+    font-size: 25px;
+    line-height: 140%;
+    color: #fdfdfd;
+    font-weight: 700;
 }
 
 /*-----------------------[ 3.Side Menu CSS ]------------------------*/
@@ -871,38 +902,11 @@ h1 span {
     padding: 80px 0;
 }
 
-#progress {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    margin-top: 30px;
-}
 
-.progress-item {
-    display: flex;
-    width: 146px;
-    height: 146px;
-    border-radius: 50%;
-    font-size: 0;
-    animation: .4s ease-out reverse;
-}
 
-.progress-item::after {
-    content: attr(data-value);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 130px;
-    margin: 8px;
-    border-radius: 50%;
-    background: #0F141C;
-    color: var(--1, #FFF);
-    text-align: center;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 32px;
-    text-transform: uppercase;
-}
+
+
+
 
 /*-----------------------[ 10.design-skill-section CSS ]------------------------*/
 .design-skill-sub-section {
@@ -1225,13 +1229,19 @@ h1 span {
 }
 
 /*-----------------------[ 13.Porfoilo-section CSS ]------------------------*/
+
+.portfolio-section,
+.awards-section {
+    margin: 35px 0;
+}
+
 .portfolios-group-main img {
     max-width: 100%;
 }
 
 .portfolio__item {
     border: 2px solid #b3afaf;
-    border-radius: 6px;
+    border-radius: 8px;
 
 }
 
@@ -1241,13 +1251,19 @@ h1 span {
     margin-top: 30px;
 }
 
+.portfolio__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
 .Corporate {
     color: var(--1, #FFF);
     font-size: 20px;
     font-weight: 500;
     line-height: 130%;
     margin-top: 8px;
-    margin-left: 5px;
+    margin-left: 8px;
 
 }
 
@@ -1272,9 +1288,17 @@ h1 span {
 .image-container {
     position: relative;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 6px;
     overflow: hidden;
+    height: 270px;
 }
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 .overlay {
     position: absolute;
@@ -1282,7 +1306,7 @@ h1 span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #ff759ccc;
+    background: rgba(0, 204, 151, .6);
     /* border-radius: 20px; */
     display: flex;
     flex-direction: column;
@@ -1290,14 +1314,10 @@ h1 span {
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease;
+    border-radius: 6px;
 }
 
-/* .vimeo-icon {
-    width: 64px;
-    height: 64px;
-    margin-bottom: 10px;
-    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(181deg) brightness(103%) contrast(103%);
-} */
+
 
 .overlay-text {
     color: #FFF;

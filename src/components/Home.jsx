@@ -1,7 +1,7 @@
-import React, { useEffect,  useState } from "react";
+import React, { useEffect, useState } from "react";
 import ProfileImg from "../assets/images/avatar.png";
 import EmailSvg from "../assets/images/svg/email-svg.svg";
-import  telegram from '../assets/images/telegram.svg';
+import telegram from '../assets/images/telegram.svg';
 import linkedin from '../assets/images/linkedin-svgrepo-com.svg'
 import github from '../assets/images/github-icon.svg'
 import HomeSvg from "../assets/images/svg/home-svg.svg";
@@ -45,7 +45,7 @@ const Home = () => {
   const [firstTextIndex, setFirstTextIndex] = useState(0);
   const [secondTextIndex, setSecondTextIndex] = useState(0);
 
- 
+
 
   // Logo marquee
   useEffect(() => {
@@ -130,7 +130,7 @@ const Home = () => {
           </h1>
           <h2 className="designer fade_up">{firstTexts[firstTextIndex]}</h2>
           <div className="profile-media-icons-main fade_up">
-            <a href="mailto:hello@biogi.com"  target="_blank" className="profile-media-icons">
+            <a href="mailto:hello@biogi.com" target="_blank" className="profile-media-icons">
               <img src={EmailSvg} alt="email-svg" />
             </a>
             <a href="https://t.me/xorozov_shahzod" target="_blank" className="profile-media-icons">
@@ -185,7 +185,7 @@ const Home = () => {
                 Resume
               </a>
             </li>
-        
+
             <li
               className={`active-menu-action ${activeLink === "portfolio" ? "active" : ""
                 }`}
@@ -199,7 +199,7 @@ const Home = () => {
                 Portfolio
               </a>
             </li>
-        
+
             <li
               className={`active-menu-action ${activeLink === "contact" ? "active" : ""
                 }`}

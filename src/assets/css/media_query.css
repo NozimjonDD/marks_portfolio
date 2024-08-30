@@ -35,12 +35,6 @@
         padding: 0 20px 0 35px;
     }
 
-    #progress {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-items: center;
-        gap: 30px;
-    }
 
     .design-skill-sub-section {
         display: grid;
@@ -339,6 +333,10 @@
         width: 90%;
         height: 90vh;
     }
+    .portfolio__grid{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
 }
 
 @media(max-width:767px) {
@@ -430,18 +428,14 @@
         padding-bottom: 9px;
     }
 
-    .progress-item {
+    /* .progress-item {
         width: 120px;
         height: 120px;
-    }
+    } */
 
-    #progress {
-        gap: 20px;
-    }
+   
 
-    .progress-item::after {
-        font-size: 25px;
-    }
+ 
 
     .design-skill-sub-section {
         grid-template-columns: repeat(2, 1fr);
@@ -541,12 +535,7 @@
         justify-items: space-between;
     }
 
-    #progress {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-        gap: 20px;
-    }
+ 
 
     .map-iframe {
         width: 100%;
@@ -628,6 +617,9 @@
 
     .services-popup-text {
         padding-bottom: 0;
+    }
+    .portfolio__grid{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 

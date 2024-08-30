@@ -12,58 +12,53 @@ function App() {
   const [loading, setLoading] = useState(true);
   const progressRef = useRef(null);
   const hasAnimated = useRef(false);
-  const colors = [
-    "#BCE70C",
-    "#FF759C",
-    "#00CC97",
-    "#FFDB59",
-    "#6F39FD",
-    "#FF7D61",
-  ];
+  const colors = ["#fff"];
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 2500);
 
     return () => clearTimeout(timer);
   }, []);
 
-  // useEffect(() => {
-  //   const progressSection = progressRef.current;
-  //   const items = progressSection.querySelectorAll(".progress-item");
-  //   const observerOptions = { threshold: 0.1 };
+  useEffect(() => {
+    if (progressRef.current) {
+      const progressSection = progressRef.current;
+      const items = progressSection.querySelectorAll(".progress-item");
+      const observerOptions = { threshold: 0.1 };
+      const progressContainer = document.querySelector(".percent__progress");
+      function handleIntersection(entries, observer) {
+        if (entries[0].isIntersecting && !hasAnimated.current) {
+          items.forEach((item, index) => {
+            let num = parseInt(item.dataset.num);
+            let count = 0;
+            let color = colors[index % colors.length];
+            let interval = setInterval(() => {
+              if (count === num) {
+                clearInterval(interval);
+              } else {
+                count++;
+                item.style.background = `conic-gradient(${color} ${count}%, #80808047 0deg)`;
+                item.setAttribute("data-value", `${count}%`);
+                progressContainer.innerHTML = `${count}%`;
+              }
+            }, 15);
+          });
+          observer.unobserve(progressSection);
+          hasAnimated.current = true; // Mark that the animation has run
+        }
+      }
 
-  //   function handleIntersection(entries, observer) {
-  //     if (entries[0].isIntersecting && !hasAnimated.current) {
-  //       items.forEach((item, index) => {
-  //         let num = parseInt(item.dataset.num);
-  //         let count = 0;
-  //         let color = colors[index % colors.length];
-  //         let interval = setInterval(() => {
-  //           if (count === num) {
-  //             clearInterval(interval);
-  //           } else {
-  //             count++;
-  //             item.style.background = `conic-gradient(${color} ${count}%, #80808047 0deg)`;
-  //             item.setAttribute("data-value", `${count}%`);
-  //             item.innerHTML = `${count}%`;
-  //           }
-  //         }, 15);
-  //       });
-  //       observer.unobserve(progressSection);
-  //       hasAnimated.current = true; // Mark that the animation has run
-  //     }
-  //   }
+      const observer = new IntersectionObserver(
+        handleIntersection,
+        observerOptions
+      );
+      observer.observe(progressSection);
 
-  //   const observer = new IntersectionObserver(
-  //     handleIntersection,
-  //     observerOptions
-  //   );
-  //   observer.observe(progressSection);
-
-  //   return () => observer.disconnect();
-  // }, [colors]);
+      return () => observer.disconnect();
+    }
+  }, [colors]);
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -94,19 +89,18 @@ function App() {
           <div className="Ellipse2"></div>
 
           <div className="container">
-            {/* <!-- ====================================== Preloader ===================================== --> */}
             {loading && (
               <div className="page-loader">
-                <img src={loadingImg} alt="loader" />
-
-                <div id="progress" ref={progressRef} style={{display:'none'}}>
+                <div id="progress" ref={progressRef}>
                   <div data-num="100" className="progress-item">
-                    <p>lorem10</p>
+                    <div className="loader__img">
+                      <img src={loadingImg} alt="loader" />
+                    </div>
                   </div>
                 </div>
+                <h3 className="percent__progress"></h3>
               </div>
             )}
-            {/* <!-- ====================================== Preloader End ===================================== --> */}
             {!loading && <Home />}
           </div>
         </div>
